@@ -1,0 +1,23 @@
+.Card {
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 30em) {
+  .Card {
+    border-radius: 30px;
+  }
+}
+
+.Card__content {
+  border-radius: inherit;
+  padding: 30px;
+}
+
+.Card__solid {
+  background-color: var(--colors-card-solid-bg);
+}
+
+.Card__outline {
+  background-color: #ffffff00;
+  border: 1px solid var(--colors-border);
+}

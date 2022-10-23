@@ -1,0 +1,28 @@
+.Spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--colors-main);
+}
+
+.Spinner__self {
+  animation: spin 0.7s linear infinite;
+  transform-origin: center;
+}
+
+.Spinner__self svg {
+  transform: scale(1);
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

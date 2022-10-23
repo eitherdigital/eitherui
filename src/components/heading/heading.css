@@ -1,0 +1,67 @@
+.Heading {
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.Heading__size_xl {
+  font-size: 1.875rem;
+  line-height: 1.33;
+}
+
+.Heading__size_4xl {
+  font-size: 3.75rem;
+  line-height: 1.2;
+}
+
+.Heading__size_3xl {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.Heading__size_2xl {
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+.Heading__size_lg {
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+
+.Heading__size_md {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.Heading__size_sm {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.Heading__size_xs {
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 48em) {
+  .Heading__size_xl {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  .Heading__size_4xl {
+    font-size: 4.5rem;
+  }
+  .Heading__size_3xl {
+    font-size: 3.75rem;
+  }
+  .Heading__size_2xl {
+    font-size: 3rem;
+  }
+  .Heading__size_lg {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+}

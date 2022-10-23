@@ -1,0 +1,18 @@
+.Text {
+  display: block;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.Text__regular {
+  font-weight: 400;
+}
+
+.Text__medium {
+  font-weight: 500;
+}
+
+.Text__semibold {
+  font-weight: 600;
+}

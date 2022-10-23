@@ -1,0 +1,13 @@
+.Div {
+  padding: 12px 16px;
+}
+
+.Div__header {
+  padding: 0px 0px 6px 0px;
+  color: var(--colors-main);
+}
+
+.Div__footer {
+  padding: 6px 0px 0px 0px;
+  color: var(--colors-main);
+}
