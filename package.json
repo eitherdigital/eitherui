@@ -12,7 +12,10 @@
 	"scripts": {
 		"build": "rollup -c --bundleConfigAsCjs",
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"build-storybook": "build-storybook --docs"
+	},
+	"bugs": {
+		"url": "https://github.com/eitherdigital/eitherui/issues"
 	},
 	"author": "eitherdigital",
 	"license": "MIT",

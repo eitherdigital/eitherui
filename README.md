@@ -27,7 +27,7 @@ function App() {
 
 ## Документация
 
-В [документации](https://eitherdigital.github.io/eitherui/) вы сможете найти информацию об использовании компонентов и утилит.
+В [документации](https://eitherdigital.github.io/eitherui/?path=/docs/eitherui-начало--page) вы сможете найти информацию об использовании компонентов и утилит.
 
 ## Сообщить о проблеме
 
