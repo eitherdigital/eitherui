@@ -18,5 +18,7 @@ const Template: Story<AvatarProps> = (args) => (
 export const Main = Template.bind({});
 
 Main.args = {
-	src: "https://sun9-18.userapi.com/c841629/v841629884/290aa/TUPsSYQXzKg.jpg?ava=1",
+	src: "https://tx.me/i/userpic/320/eitherdigital.jpg",
+	name: "Either Digital",
+	userId: 1
 };
