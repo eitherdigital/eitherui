@@ -13,10 +13,10 @@ export type ButtonProps = {
 
 function Button({
 	children,
-	mode,
+	mode = "solid",
 	full,
 	style,
-	size,
+	size = "md",
 	className,
 	...other
 }: ButtonProps) {
@@ -24,8 +24,8 @@ function Button({
 		<button
 			className={classNamesString(
 				"Button",
-				`Button__${mode || "solid"}`,
-				`Button__size_${size || "md"}`,
+				`Button__${mode}`,
+				`Button__size_${size}`,
 				full && "Button__full",
 				className
 			)}

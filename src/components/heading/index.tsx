@@ -9,12 +9,18 @@ export type HeadingProps = {
 	className?: string;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
-function Heading({ style, size, children, className, ...other }: HeadingProps) {
+function Heading({
+	style,
+	size = "xl",
+	children,
+	className,
+	...other
+}: HeadingProps) {
 	return (
 		<h2
 			className={classNamesString(
 				"Heading",
-				`Heading__size_${size || "xl"}`,
+				`Heading__size_${size}`,
 				className
 			)}
 			style={style}

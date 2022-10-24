@@ -8,15 +8,12 @@ export type CardProps = {
 
 export default function Card({
 	children,
-	mode,
+	mode = "solid",
 	className,
 	...otherProps
 }: CardProps) {
 	return (
-		<div
-			className={classNamesString("Card", `Card__${mode || "solid"}`)}
-			{...otherProps}
-		>
+		<div className={classNamesString("Card", `Card__${mode}`)} {...otherProps}>
 			<div className="Card__content">{children}</div>
 		</div>
 	);

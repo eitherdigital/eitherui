@@ -9,17 +9,13 @@ export type TextProps = {
 	className?: string;
 };
 
-function Text(props: TextProps) {
+function Text({ weight = "regular", children, style, className }: TextProps) {
 	return (
 		<p
-			className={classNamesString(
-				"Text",
-				`Text__${props.weight || "regular"}`,
-				props.className
-			)}
-			style={props.style}
+			className={classNamesString("Text", `Text__${weight}`, className)}
+			style={style}
 		>
-			{props.children}
+			{children}
 		</p>
 	);
 }
