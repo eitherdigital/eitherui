@@ -14,7 +14,7 @@ function Text(props: TextProps) {
 		<p
 			className={classNamesString(
 				"Text",
-				`Text__${props.weight}`,
+				`Text__${props.weight || "regular"}`,
 				props.className
 			)}
 			style={props.style}
