@@ -8,3 +8,4 @@ export { default as Div } from "./div";
 export { default as Card } from "./card";
 export { default as ContentCard } from "./contentcard";
 export { default as Progress } from "./progress";
+export { default as Avatar } from "./avatar";

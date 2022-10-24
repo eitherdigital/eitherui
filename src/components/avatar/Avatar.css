@@ -1,0 +1,49 @@
+.Avatar {
+	flex-shrink: 0;
+	box-sizing: border-box;
+	color: var(--colors-avatar-bg);
+	background: currentColor;
+	background-size: cover;
+	position: relative;
+}
+
+.Avatar__failed .Avatar__img {
+	display: none;
+}
+
+.Avatar__img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: inherit;
+	object-fit: cover;
+}
+
+.Avatar__svg {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: inherit;
+	object-fit: cover;
+}
+
+.Avatar__children {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.Avatar__name {
+	font-weight: 600;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+}
