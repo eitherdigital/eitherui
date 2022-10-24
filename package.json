@@ -10,6 +10,11 @@
 		"type": "git",
 		"url": "git+https://github.com/eitherdigital/eitherui.git"
 	},
+	"keywords": [
+		"react",
+		"react-components",
+		"eitherui"
+	],
 	"scripts": {
 		"build": "rollup -c --bundleConfigAsCjs",
 		"storybook": "start-storybook -p 6006",
