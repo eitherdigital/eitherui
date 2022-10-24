@@ -5,6 +5,7 @@
 	"main": "lib/index.js",
 	"module": "lib/index.esm.js",
 	"types": "lib/index.d.ts",
+	"homepage": "https://eitherdigital.github.io/eitherui",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/eitherdigital/eitherui.git"
