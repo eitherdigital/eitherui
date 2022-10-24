@@ -13,8 +13,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install and Build
-        run: npm install --force && CI=false npm run build-storybook
+      - name: Install dependencies 
+        run: npm install --force
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build Storybook
+        run: CI=false npm run build-storybook
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
