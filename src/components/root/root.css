@@ -7,6 +7,7 @@
 	transition-duration: 200ms;
 	line-height: 1.5;
 	font-family: "Inter", sans-serif;
+	--colors-text: #333333;
 	--colors-main: #40b0bf;
 	--colors-main-50: #ecf7f9;
 	--colors-main-100: #cae9ed;
@@ -23,4 +24,5 @@
 	--colors-contentcard-text: rgba(0, 0, 0, 0.5);
 	--fontsizes-contentcard-text-mobile: 17px;
 	--fontsizes-contentcard-text: 23px;
+	--colors-progress-bg: #e1e3e6;
 }
