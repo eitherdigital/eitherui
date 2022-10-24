@@ -6,3 +6,5 @@ export { default as Link } from "./link";
 export { default as Spinner } from "./spinner";
 export { default as Div } from "./div";
 export { default as Card } from "./card";
+export { default as ContentCard } from "./contentcard";
+export { default as Progress } from "./progress";
