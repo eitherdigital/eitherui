@@ -1,0 +1,25 @@
+.ContentCard__text {
+	color: var(--colors-contentcard-text);
+	font-size: var(--fontsizes-contentcard-text-mobile);
+	line-height: 140%;
+}
+
+@media screen and (min-width: 30em) {
+	.ContentCard__text {
+		font-size: var(--fontsizes-contentcard-text);
+	}
+}
+
+.ContentCard__stack {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 30em) {
+	.ContentCard__stack > *:not(style) ~ *:not(style) {
+		margin-top: 20px;
+	}
+	.ContentCard__stack > *:not(style) ~ *:not(style) {
+		margin-top: 15px;
+	}
+}
