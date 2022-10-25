@@ -19,7 +19,8 @@
 	.ContentCard__stack > *:not(style) ~ *:not(style) {
 		margin-top: 20px;
 	}
-	.ContentCard__stack > *:not(style) ~ *:not(style) {
-		margin-top: 15px;
-	}
+}
+
+.ContentCard__stack > *:not(style) ~ *:not(style) {
+	margin-top: 15px;
 }
