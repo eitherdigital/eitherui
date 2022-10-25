@@ -7,6 +7,7 @@
 	transition-duration: 200ms;
 	line-height: 1.5;
 	font-family: "Inter", sans-serif;
+	--fonts-main: "Inter", sans-serif;
 	--colors-text: #333333;
 	--colors-main: #40b0bf;
 	--colors-main-50: #ecf7f9;
@@ -28,7 +29,7 @@
 	--colors-avatar-bg: #a0aec0;
 	--colors-input-bg: rgb(239, 243, 244);
 	--colors-input-bg-hover: #e2e8f0;
-	--colors-input-placeholder: #353535;
+	--colors-input-placeholder: #718096;
 }
 
 .root *:disabled {

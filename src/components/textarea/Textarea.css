@@ -1,0 +1,61 @@
+.Textarea {
+	min-width: 0px;
+	outline-offset: 2px;
+	position: relative;
+	appearance: none;
+	transition-property: background-color, border-color, color, fill, stroke,
+		opacity, box-shadow, transform;
+	transition-duration: 200ms;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	min-height: 100px;
+	line-height: 20px;
+	vertical-align: top;
+	font-size: 16px;
+	padding-inline-start: 1rem;
+	padding-inline-end: 1rem;
+	z-index: 1;
+	background-color: var(--colors-input-bg);
+	font-weight: 400;
+	outline: transparent solid 2px;
+	border-radius: 20px;
+	border-width: 2px;
+	border-style: solid;
+	border-image: initial;
+	border-color: transparent;
+	font-family: var(--fonts-main);
+}
+
+.Textarea:hover {
+	background-color: var(--colors-input-bg-hover);
+}
+
+.Textarea:focus-visible {
+	background-color: transparent;
+	border-color: var(--colors-main);
+}
+.Textarea::-webkit-input-placeholder {
+	color: var(--colors-input-placeholder);
+}
+.Textarea::-moz-placeholder {
+	color: var(--colors-input-placeholder);
+}
+.Textarea:-ms-input-placeholder {
+	color: var(--colors-input-placeholder);
+}
+.Textarea::placeholder {
+	color: var(--colors-input-placeholder);
+}
+
+.Textarea__invalid {
+	border-color: #e53e3e;
+}
+
+@media screen and (min-width: 30em) {
+	.Textarea {
+		line-height: 24px;
+		font-size: 18px;
+		border-radius: 25px;
+		min-height: 150px;
+	}
+}
