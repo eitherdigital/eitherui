@@ -26,4 +26,7 @@
 	--fontsizes-contentcard-text: 23px;
 	--colors-progress-bg: #e1e3e6;
 	--colors-avatar-bg: #a0aec0;
+	--colors-input-bg: rgb(239, 243, 244);
+	--colors-input-bg-hover: #e2e8f0;
+	--colors-input-placeholder: #353535;
 }
