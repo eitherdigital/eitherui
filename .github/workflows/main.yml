@@ -13,14 +13,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install dependencies 
-        run: npm install --force
+      - name: Install dependencies
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: install
 
       - name: Run tests
-        run: npm run test
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: test
 
       - name: Build Storybook
-        run: CI=false npm run build-storybook
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: build-storybook
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3

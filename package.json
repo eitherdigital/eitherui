@@ -16,7 +16,7 @@
 		"eitherui"
 	],
 	"scripts": {
-		"build": "npm run test && rollup -c --bundleConfigAsCjs",
+		"build": "yarn test && rollup -c --bundleConfigAsCjs",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook --docs",
 		"test": "jest"
