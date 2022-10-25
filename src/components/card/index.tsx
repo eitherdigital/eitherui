@@ -13,7 +13,10 @@ export default function Card({
 	...otherProps
 }: CardProps) {
 	return (
-		<div className={classNamesString("Card", `Card__${mode}`)} {...otherProps}>
+		<div
+			className={classNamesString("Card", `Card__${mode}`, className)}
+			{...otherProps}
+		>
 			<div className="Card__content">{children}</div>
 		</div>
 	);

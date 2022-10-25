@@ -1,4 +1,5 @@
 import React from "react";
+import { classNamesString } from "../../lib/classNames";
 import "./Progress.css";
 
 export type ProgressProps = {
@@ -8,7 +9,7 @@ export type ProgressProps = {
 const PROGRESS_MIN_VALUE = 0;
 const PROGRESS_MAX_VALUE = 100;
 
-function Progress({ value = 0, ...restProps }: ProgressProps) {
+function Progress({ value = 0, className, ...restProps }: ProgressProps) {
 	const progress = Math.max(
 		PROGRESS_MIN_VALUE,
 		Math.min(value, PROGRESS_MAX_VALUE)
@@ -21,7 +22,7 @@ function Progress({ value = 0, ...restProps }: ProgressProps) {
 			role="progressbar"
 			aria-valuemin={PROGRESS_MIN_VALUE}
 			aria-valuemax={PROGRESS_MAX_VALUE}
-			className="Progress"
+			className={classNamesString("Progress", className)}
 		>
 			<div
 				className="Progress__in"

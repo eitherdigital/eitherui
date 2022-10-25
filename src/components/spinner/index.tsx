@@ -4,6 +4,7 @@ import SpinnerIcon32 from "./icons/SpinnerIcon32";
 import SpinnerIcon24 from "./icons/SpinnerIcon24";
 import SpinnerIcon16 from "./icons/SpinnerIcon16";
 import "./spinner.css";
+import { classNamesString } from "../../lib/classNames";
 
 export interface SpinnerProps extends React.HTMLAttributes<HTMLSpanElement> {
 	size?: "xs" | "sm" | "md" | "lg";
@@ -13,6 +14,7 @@ const Spinner = React.memo(
 	({
 		size = "sm",
 		"aria-label": ariaLabel = "Загрузка...",
+		className,
 		...restProps
 	}: SpinnerProps) => {
 		const SpinnerIcon = {
@@ -52,7 +54,7 @@ const Spinner = React.memo(
 		return (
 			<span
 				role="status"
-				className={"Spinner"}
+				className={classNamesString("Spinner", className)}
 				aria-label={ariaLabel}
 				{...restProps}
 			>

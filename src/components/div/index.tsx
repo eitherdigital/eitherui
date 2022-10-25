@@ -16,9 +16,9 @@ export type DivProps = {
 	};
 } & React.HTMLAttributes<HTMLDivElement>;
 
-function Div({ children, header, footer, ...otherProps }: DivProps) {
+function Div({ children, header, footer, className, ...otherProps }: DivProps) {
 	return (
-		<div className={"Div"} {...otherProps}>
+		<div className={classNamesString("Div", className)} {...otherProps}>
 			{header && (
 				<div
 					style={header.style}
