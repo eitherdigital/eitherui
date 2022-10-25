@@ -9,6 +9,7 @@ export type ButtonProps = {
 	style?: React.CSSProperties;
 	size?: "xs" | "sm" | "md" | "lg";
 	className?: string;
+	disabled?: boolean;
 } & React.HTMLAttributes<HTMLButtonElement>;
 
 function Button({
@@ -18,10 +19,12 @@ function Button({
 	style,
 	size = "md",
 	className,
+	disabled,
 	...other
 }: ButtonProps) {
 	return (
 		<button
+			disabled={disabled}
 			className={classNamesString(
 				"Button",
 				`Button__${mode}`,

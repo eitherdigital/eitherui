@@ -30,3 +30,8 @@
 	--colors-input-bg-hover: #e2e8f0;
 	--colors-input-placeholder: #353535;
 }
+
+.root *:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
