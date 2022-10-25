@@ -20,5 +20,4 @@ export const Main = Template.bind({});
 Main.args = {
 	src: "https://tx.me/i/userpic/320/eitherdigital.jpg",
 	name: "Either Digital",
-	userId: 1
 };

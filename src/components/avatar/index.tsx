@@ -9,6 +9,10 @@ export type AvatarProps = {
 	 */
 	size?: number;
 	name?: string;
+	/**
+	 * Either Digital использует формулу user_id % 8 для определения цвета фона пользователя. Например, у пользователя c id 106 будет 0-й (orange) цвет фон.
+	 * Если это значение не будет передано, цвет будет выбираться рандомно.
+	 */
 	userId?: number;
 } & React.ImgHTMLAttributes<HTMLElement>;
 
