@@ -10,3 +10,5 @@ export { default as ContentCard } from "./contentcard";
 export { default as Progress } from "./progress";
 export { default as Avatar } from "./avatar";
 export { default as Stack } from "./stack";
+export { default as Input } from "./input";
+export { default as Textarea } from "./textarea";
