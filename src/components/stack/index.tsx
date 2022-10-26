@@ -31,9 +31,15 @@ function Stack({
 		);
 	}
 
-	const [width, setWidth] = React.useState<number>(0);
+	const [width, setWidth] = React.useState<number>(function getWidth() {
+		if (typeof window !== "undefined") {
+			return window.innerWidth;
+		}
+		return 0;
+	});
 
 	React.useEffect(() => {
+		setWidth(window.innerWidth);
 		window.addEventListener("resize", () => setWidth(window.innerWidth));
 		return () => {
 			window.removeEventListener("resize", () => setWidth(window.innerWidth));
