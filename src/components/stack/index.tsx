@@ -31,15 +31,12 @@ function Stack({
 		);
 	}
 
-	const [width, setWidth] = React.useState<number>(window.innerWidth);
+	const [width, setWidth] = React.useState<number>(0);
 
-	function handleWindowSizeChange() {
-		setWidth(window.innerWidth);
-	}
 	React.useEffect(() => {
-		window.addEventListener("resize", handleWindowSizeChange);
+		window.addEventListener("resize", () => setWidth(window.innerWidth));
 		return () => {
-			window.removeEventListener("resize", handleWindowSizeChange);
+			window.removeEventListener("resize", () => setWidth(window.innerWidth));
 		};
 	}, []);
 
