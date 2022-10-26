@@ -5,12 +5,12 @@ import { injectStyes } from "../../lib/styles";
 export type StackProps = {
 	direction?: "row" | "column" | "row-reverse" | "column-reverse";
 	/**
-	 * Укажите этот параметр, если вам нужен другое значение direction на телефонах.
+	 * Укажите этот параметр, если вам нужно другое значение direction на телефонах.
 	 */
 	mobileDirection?: "row" | "column" | "row-reverse" | "column-reverse";
 	spacing?: string;
 	/**
-	 * Укажите этот параметр, если вам нужен другое значение spacing на телефонах.
+	 * Укажите этот параметр, если вам нужно другое значение spacing на телефонах.
 	 * Внимание! Нельзя указывать mobileSpacing при этом не указав spacing.
 	 */
 	mobileSpacing?: string;
