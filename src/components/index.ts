@@ -12,3 +12,5 @@ export { default as Avatar } from "./avatar";
 export { default as Stack } from "./stack";
 export { default as Input } from "./input";
 export { default as Textarea } from "./textarea";
+export { default as Center } from "./center";
+export { default as ContentContainer } from "./contentcontainer";

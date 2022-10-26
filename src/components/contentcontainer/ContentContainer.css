@@ -1,0 +1,47 @@
+.ContentContainer {
+	width: 100%;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	max-width: 100%;
+	padding-inline-start: 0px;
+	padding-inline-end: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+@media screen and (min-width: 30em) {
+	.ContentContainer {
+		max-width: 100%;
+		padding-inline-start: 0px;
+		padding-inline-end: 0px;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+}
+@media screen and (min-width: 48em) {
+	.ContentContainer {
+		max-width: 100%;
+		padding-inline-start: 0px;
+		padding-inline-end: 0px;
+	}
+}
+@media screen and (min-width: 62em) {
+	.ContentContainer {
+		max-width: 100%;
+		padding-inline-start: 1rem;
+		padding-inline-end: 1rem;
+	}
+}
+@media screen and (min-width: 80em) {
+	.ContentContainer {
+		max-width: 100%;
+		padding-inline-start: 1rem;
+		padding-inline-end: 1rem;
+	}
+}
+@media screen and (min-width: 96em) {
+	.ContentContainer {
+		max-width: 90rem;
+		padding-inline-start: 1rem;
+		padding-inline-end: 1rem;
+	}
+}
