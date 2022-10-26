@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString, generateClassname } from "../../lib/classNames";
-import { injectStyes } from "../../lib/styles";
+import { injectStyles } from "../../lib/styles";
 
 export type StackProps = {
 	direction?: "row" | "column" | "row-reverse" | "column-reverse";
@@ -89,7 +89,7 @@ function Stack({
 		}
   `;
 
-	injectStyes(styles);
+	injectStyles(styles);
 
 	return (
 		<div className={classNamesString(stackClass, className)} {...otherProps}>
