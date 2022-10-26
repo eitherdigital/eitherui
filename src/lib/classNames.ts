@@ -1,44 +1,54 @@
 export interface ObjectClassNames {
-  [index: string]: boolean | undefined | null;
+	[index: string]: boolean | undefined | null;
 }
 
 export type ClassName =
-  | number
-  | string
-  | ObjectClassNames
-  | false
-  | null
-  | undefined;
+	| number
+	| string
+	| ObjectClassNames
+	| false
+	| null
+	| undefined;
 
 export function classNames(...classnames: ClassName[]): string | string[];
 export function classNames() {
-  let result: string[] = [];
+	let result: string[] = [];
 
-  for (let i = 0; i < arguments.length; i++) {
-    const item = arguments[i];
-    if (!item) {
-      continue;
-    }
-    switch (typeof item) {
-      case "string":
-        result.push(item);
-        break;
-      case "object":
-        for (let key in item) {
-          if (item[key]) {
-            result.push(key);
-          }
-        }
-        break;
-      default:
-        result.push(`${item}`);
-    }
-  }
+	for (let i = 0; i < arguments.length; i++) {
+		const item = arguments[i];
+		if (!item) {
+			continue;
+		}
+		switch (typeof item) {
+			case "string":
+				result.push(item);
+				break;
+			case "object":
+				for (let key in item) {
+					if (item[key]) {
+						result.push(key);
+					}
+				}
+				break;
+			default:
+				result.push(`${item}`);
+		}
+	}
 
-  return result.length > 1 ? result : result[0] || "";
+	return result.length > 1 ? result : result[0] || "";
 }
 
 export function classNamesString(...args: ClassName[]) {
-  const res = classNames(...args);
-  return typeof res === "string" ? res : res.join(" ");
+	const res = classNames(...args);
+	return typeof res === "string" ? res : res.join(" ");
+}
+
+export function generateClassname(prefix?: string) {
+	let className = `eitherui${prefix ? `__${prefix}` : ""}__`;
+	const symbols =
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	for (let i = 0; i < 6; i++) {
+		className += symbols.charAt(Math.floor(Math.random() * symbols.length));
+	}
+	return className;
 }

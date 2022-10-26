@@ -9,3 +9,4 @@ export { default as Card } from "./card";
 export { default as ContentCard } from "./contentcard";
 export { default as Progress } from "./progress";
 export { default as Avatar } from "./avatar";
+export { default as Stack } from "./stack";
