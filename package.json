@@ -2,9 +2,9 @@
 	"name": "eitherui",
 	"version": "0.0.8",
 	"description": "Библиотека React-компонентов для Either Digital",
-	"main": "lib/index.js",
-	"module": "lib/index.esm.js",
-	"types": "lib/index.d.ts",
+	"main": "dist/index.js",
+	"module": "dist/index.esm.js",
+	"types": "dist/index.d.ts",
 	"homepage": "https://eitherdigital.github.io/eitherui",
 	"repository": {
 		"type": "git",
