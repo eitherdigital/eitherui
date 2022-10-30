@@ -13,6 +13,7 @@
 
 ```jsx static
 import { EitherRoot, Heading, Card } from "eitherui";
+import "eitherui/dist/eitherui.css";
 
 function App() {
 	return (
