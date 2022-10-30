@@ -17,8 +17,8 @@
 	],
 	"scripts": {
 		"build": "yarn test && rollup -c --bundleConfigAsCjs",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook --docs",
+		"storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+		"build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider &&build-storybook --docs",
 		"test": "jest"
 	},
 	"bugs": {
