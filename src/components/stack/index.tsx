@@ -32,6 +32,8 @@ function Stack({
 		);
 	}
 
+	const [stackClass] = React.useState<string>(generateClassname("Stack"));
+
 	const [width, setWidth] = React.useState<number>(function getWidth() {
 		if (typeof window !== "undefined") {
 			return window.innerWidth;
@@ -60,7 +62,6 @@ function Stack({
 		return direction === currentDirection ? spacing : "0px";
 	};
 
-	let stackClass = generateClassname("Stack");
 	let css = `
     ${
 			spacing
