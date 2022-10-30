@@ -1,6 +1,7 @@
 import React from "react";
 import { classNamesString, generateClassname } from "../../lib/classNames";
 import { injectStyles } from "../../lib/styles";
+import styles from "./Stack.css";
 
 export type StackProps = {
 	direction?: "row" | "column" | "row-reverse" | "column-reverse";
@@ -38,13 +39,7 @@ function Stack({
 		return 0;
 	});
 
-	React.useEffect(() => {
-		setWidth(window.innerWidth);
-		window.addEventListener("resize", () => setWidth(window.innerWidth));
-		return () => {
-			window.removeEventListener("resize", () => setWidth(window.innerWidth));
-		};
-	}, []);
+	let isSSR: boolean = false;
 
 	const isMobile = width <= 768;
 
@@ -66,16 +61,7 @@ function Stack({
 	};
 
 	let stackClass = generateClassname("Stack");
-	let styles = `
-    .${stackClass} {
-      display: flex;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      flex-direction: ${
-				isMobile ? (mobileDirection ? mobileDirection : direction) : direction
-			};
-    }
+	let css = `
     ${
 			spacing
 				? `
@@ -92,10 +78,41 @@ function Stack({
 		}
   `;
 
-	injectStyles(styles);
+	React.useEffect(() => {
+		if (isSSR) {
+			injectStyles(css);
+		}
+		setWidth(window.innerWidth);
+		window.addEventListener("resize", () => setWidth(window.innerWidth));
+		return () => {
+			window.removeEventListener("resize", () => setWidth(window.innerWidth));
+		};
+	}, []);
+
+	if (typeof window !== "undefined") {
+		injectStyles(css);
+	} else {
+		isSSR = true;
+	}
 
 	return (
-		<div className={classNamesString(stackClass, className)} {...otherProps}>
+		<div
+			className={classNamesString(
+				styles["Stack"],
+				styles[
+					`Stack--${
+						isMobile
+							? mobileDirection
+								? mobileDirection
+								: direction
+							: direction
+					}`
+				],
+				stackClass,
+				className
+			)}
+			{...otherProps}
+		>
 			{children}
 		</div>
 	);
