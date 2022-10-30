@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
-import "./text.css";
+import styles from "./Text.css";
 
 export type TextProps = {
 	weight?: "regular" | "medium" | "semibold";
@@ -12,7 +12,11 @@ export type TextProps = {
 function Text({ weight = "regular", children, style, className }: TextProps) {
 	return (
 		<p
-			className={classNamesString("Text", `Text__${weight}`, className)}
+			className={classNamesString(
+				styles["Text"],
+				styles[`Text__${weight}`],
+				className
+			)}
 			style={style}
 		>
 			{children}

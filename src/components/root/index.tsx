@@ -1,5 +1,5 @@
 import React from "react";
-import "./root.css";
+import styles from "./Root.css";
 
 export type RootProps = {
 	children?: React.ReactNode;
@@ -7,7 +7,7 @@ export type RootProps = {
 
 export default function EitherRoot({ children }: RootProps) {
 	return (
-		<div id="eitherui__Root" className={"root"}>
+		<div id="eitherui__Root" className={styles["root"]}>
 			{children}
 		</div>
 	);

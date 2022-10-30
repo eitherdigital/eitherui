@@ -3,7 +3,7 @@ import SpinnerIcon44 from "./icons/SpinnerIcon44";
 import SpinnerIcon32 from "./icons/SpinnerIcon32";
 import SpinnerIcon24 from "./icons/SpinnerIcon24";
 import SpinnerIcon16 from "./icons/SpinnerIcon16";
-import "./spinner.css";
+import styles from "./Spinner.css";
 import { classNamesString } from "../../lib/classNames";
 
 export interface SpinnerProps extends React.HTMLAttributes<HTMLSpanElement> {
@@ -21,7 +21,7 @@ const Spinner = React.memo(
 			lg: (
 				<div
 					style={{ width: "44px", height: "44px" }}
-					className={"Spinner__self"}
+					className={styles["Spinner__self"]}
 				>
 					<SpinnerIcon44 />
 				</div>
@@ -29,7 +29,7 @@ const Spinner = React.memo(
 			md: (
 				<div
 					style={{ width: "32px", height: "32px" }}
-					className={"Spinner__self"}
+					className={styles["Spinner__self"]}
 				>
 					<SpinnerIcon32 />
 				</div>
@@ -37,7 +37,7 @@ const Spinner = React.memo(
 			sm: (
 				<div
 					style={{ width: "24px", height: "24px" }}
-					className={"Spinner__self"}
+					className={styles["Spinner__self"]}
 				>
 					<SpinnerIcon24 />
 				</div>
@@ -45,7 +45,7 @@ const Spinner = React.memo(
 			xs: (
 				<div
 					style={{ width: "16px", height: "16px" }}
-					className={"Spinner__self"}
+					className={styles["Spinner__self"]}
 				>
 					<SpinnerIcon16 />
 				</div>
@@ -54,7 +54,7 @@ const Spinner = React.memo(
 		return (
 			<span
 				role="status"
-				className={classNamesString("Spinner", className)}
+				className={classNamesString(styles["Spinner"], className)}
 				aria-label={ariaLabel}
 				{...restProps}
 			>

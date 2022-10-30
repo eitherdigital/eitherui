@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
-import "./button.css";
+import styles from "./Button.css";
 
 export type ButtonProps = {
 	children?: React.ReactNode;
@@ -26,10 +26,10 @@ function Button({
 		<button
 			disabled={disabled}
 			className={classNamesString(
-				"Button",
-				`Button__${mode}`,
-				`Button__size_${size}`,
-				full && "Button__full",
+				styles["Button"],
+				styles[`Button__${mode}`],
+				styles[`Button__size_${size}`],
+				full && styles["Button__full"],
 				className
 			)}
 			style={style}

@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
-import "./Avatar.css";
+import styles from "./Avatar.css";
 import { getInitials, getInitialsFontSize, getRandomColor } from "./helpers";
 
 export type AvatarProps = {
@@ -49,9 +49,9 @@ function Avatar({
 	return (
 		<div
 			className={classNamesString(
-				"Avatar",
-				`Avatar__size-${size}`,
-				failedImage && "Avatar__failed",
+				styles["Avatar"],
+				styles[`Avatar__size-${size}`],
+				failedImage && styles["Avatar__failed"],
 				className
 			)}
 			role={hasSrc ? "img" : "presentation"}
@@ -81,18 +81,18 @@ function Avatar({
 					width={width}
 					onError={onImageError}
 					onLoad={onImageLoad}
-					className="Avatar__img"
+					className={styles["Avatar__img"]}
 					alt={alt}
 				/>
 			)}
 			{failedImage && (
 				<>
 					{(name && (
-						<div className="Avatar__children">
+						<div className={styles["Avatar__children"]}>
 							<span
 								aria-hidden="true"
 								style={{ fontSize: getInitialsFontSize(size) }}
-								className="Avatar__name"
+								className={styles["Avatar__name"]}
 							>
 								{getInitials(name)}
 							</span>
@@ -100,7 +100,7 @@ function Avatar({
 					)) || (
 						<svg
 							viewBox="0 0 128 128"
-							className="Avatar__svg"
+							className={styles["Avatar__svg"]}
 							role="img"
 							aria-label="avatar"
 						>

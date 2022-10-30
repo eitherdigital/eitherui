@@ -4,6 +4,8 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import path from "path";
+import autoprefixer from "autoprefixer";
+import prefixer from "postcss-prefixer";
 
 const packageJson = require("./package.json");
 
@@ -32,6 +34,13 @@ export default {
 		postcss({
 			extensions: [".css"],
 			extract: path.resolve("dist/eitherui.css"),
+			modules: true,
+			plugins: [
+				autoprefixer(),
+				prefixer({
+					prefix: "eitherui__",
+				}),
+			],
 		}),
 	],
 };

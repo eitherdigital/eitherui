@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
-import "./Textarea.css";
+import styles from "./Textarea.css";
 
 export type TextareaProps = {
 	defaultValue?: string;
@@ -17,8 +17,8 @@ function Textarea({
 		<textarea
 			value={defaultValue}
 			className={classNamesString(
-				"Textarea",
-				invalid && "Textarea__invalid",
+				styles["Textarea"],
+				invalid && styles["Textarea__invalid"],
 				className
 			)}
 			{...otherProps}

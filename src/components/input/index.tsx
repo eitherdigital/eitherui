@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
-import "./Input.css";
+import styles from "./Input.css";
 
 export type InputProps = {
 	invalid?: boolean;
@@ -10,8 +10,8 @@ function Input({ className, invalid, ...inputProps }: InputProps) {
 	return (
 		<input
 			className={classNamesString(
-				"Input",
-				invalid && "Input__invalid",
+				styles["Input"],
+				invalid && styles["Input__invalid"],
 				className
 			)}
 			{...inputProps}

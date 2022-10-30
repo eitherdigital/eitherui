@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
-import "./heading.css";
+import styles from "./Heading.css";
 
 export type HeadingProps = {
 	style?: React.CSSProperties;
@@ -19,8 +19,8 @@ function Heading({
 	return (
 		<h2
 			className={classNamesString(
-				"Heading",
-				`Heading__size_${size}`,
+				styles["Heading"],
+				styles[`Heading__size_${size}`],
 				className
 			)}
 			style={style}

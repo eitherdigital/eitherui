@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
-import "./Progress.css";
+import styles from "./Progress.css";
 
 export type ProgressProps = {
 	value?: number;
@@ -22,10 +22,10 @@ function Progress({ value = 0, className, ...restProps }: ProgressProps) {
 			role="progressbar"
 			aria-valuemin={PROGRESS_MIN_VALUE}
 			aria-valuemax={PROGRESS_MAX_VALUE}
-			className={classNamesString("Progress", className)}
+			className={classNamesString(styles["Progress"], className)}
 		>
 			<div
-				className="Progress__in"
+				className={styles["Progress__in"]}
 				style={{ width: `${progress}%` }}
 				aria-hidden
 			/>

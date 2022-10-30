@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
-import "./link.css";
+import styles from "./Link.css";
 
 export type LinkProps = {
 	children?: React.ReactNode;
@@ -19,7 +19,7 @@ export default function Link({
 }: LinkProps) {
 	return (
 		<a
-			className={classNamesString("Link", className)}
+			className={classNamesString(styles["Link"], className)}
 			href={href}
 			target={isExternal ? "_blank" : undefined}
 			{...other}

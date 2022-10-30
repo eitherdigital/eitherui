@@ -1,6 +1,6 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
-import "./card.css";
+import styles from "./Card.css";
 
 export type CardProps = {
 	mode?: "outline" | "solid";
@@ -14,10 +14,14 @@ export default function Card({
 }: CardProps) {
 	return (
 		<div
-			className={classNamesString("Card", `Card__${mode}`, className)}
+			className={classNamesString(
+				styles["Card"],
+				styles[`Card__${mode}`],
+				className
+			)}
 			{...otherProps}
 		>
-			<div className="Card__content">{children}</div>
+			<div className={styles["Card__content"]}>{children}</div>
 		</div>
 	);
 }
