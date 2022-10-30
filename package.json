@@ -73,5 +73,8 @@
 	},
 	"engines": {
 		"yarn": "^1.21.1"
+	},
+	"dependencies": {
+		"react-css-component": "^1.0.2"
 	}
 }
