@@ -1,6 +1,5 @@
 import React from "react";
 import { classNamesString, generateClassname } from "../../lib/classNames";
-import { injectStyles } from "../../lib/styles";
 import styles from "./Stack.css";
 import { UniversalStyle as Style } from "react-css-component";
 
