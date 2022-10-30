@@ -26,7 +26,7 @@ jobs:
       - name: Build Storybook
         uses: borales/actions-yarn@v3.0.0
         with:
-          cmd: build-storybook
+          cmd: gh-pages
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
