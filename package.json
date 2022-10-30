@@ -1,6 +1,6 @@
 {
 	"name": "eitherui",
-	"version": "0.0.9",
+	"version": "0.1.0",
 	"description": "Библиотека React-компонентов для Either Digital",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
