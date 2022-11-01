@@ -10,7 +10,7 @@ export default {
 	component: Stack,
 } as Meta;
 
-const Template: Story<StackProps> = (args) => (
+const Template: Story<StackProps> = args => (
 	<EitherRoot>
 		<Stack {...args}>
 			<Button>Button 1</Button>
@@ -22,8 +22,8 @@ const Template: Story<StackProps> = (args) => (
 export const Main = Template.bind({});
 
 Main.args = {
-	direction: "row",
-	spacing: "20px",
+	direction: ["column", "row"],
+	spacing: ["10px", "20px"],
 	mobileDirection: "column",
 	mobileSpacing: "10px",
 };
