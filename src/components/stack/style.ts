@@ -31,7 +31,6 @@ export function getStyles({ direction, spacing, className }: getStylesProps) {
 	let css: string = ``;
 
 	breakpoints.map((breakpoint, index) => {
-		console.log(index);
 		let styles = ``;
 		if (!isArray(direction)) {
 			styles += `flex-direction: ${direction};`;
