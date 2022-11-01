@@ -24,6 +24,4 @@ export const Main = Template.bind({});
 Main.args = {
 	direction: ["column", "row"],
 	spacing: ["10px", "20px"],
-	mobileDirection: "column",
-	mobileSpacing: "10px",
 };
