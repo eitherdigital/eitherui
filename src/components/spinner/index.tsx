@@ -65,4 +65,3 @@ const Spinner = React.memo(
 );
 
 export default Spinner;
-Spinner.displayName = "Spinner";

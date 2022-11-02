@@ -1,4 +1,5 @@
 import React from "react";
+import { Spinner } from "..";
 import { classNamesString, generateClassname } from "../../lib/classNames";
 import { StyleProvider } from "../../lib/style-system";
 import { DivCssProps } from "../../lib/style-system/style.types";
@@ -13,6 +14,7 @@ export type ButtonProps = {
 	size?: "xs" | "sm" | "md" | "lg";
 	className?: string;
 	disabled?: boolean;
+	loading?: boolean;
 } & DivCssProps &
 	React.HTMLAttributes<HTMLButtonElement>;
 
@@ -24,6 +26,7 @@ function Button({
 	size = "md",
 	className,
 	disabled,
+	loading,
 	width,
 	height,
 	margin,
@@ -61,19 +64,21 @@ function Button({
 			})}
 		>
 			<button
-				disabled={disabled}
+				disabled={loading ? true : disabled}
 				className={classNamesString(
 					styles["Button"],
 					styles[`Button__${mode}`],
 					styles[`Button__size_${size}`],
 					full && styles["Button__full"],
+					loading && styles["Button__loading"],
 					buttonClass,
 					className
 				)}
 				style={style}
 				{...other}
 			>
-				{children}
+				{loading && <Spinner style={{ color: "white" }} size="sm" />}
+				<span className={styles["Button__children"]}>{children}</span>
 			</button>
 		</StyleProvider>
 	);
