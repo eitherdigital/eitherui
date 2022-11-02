@@ -10,7 +10,9 @@ function Div({
 	children,
 	className,
 	width,
+	maxWidth,
 	height,
+	maxHeight,
 	borderRadius,
 	margin,
 	marginBottom,
@@ -45,6 +47,8 @@ function Div({
 				paddingRight: paddingRight,
 				paddingTop: paddingTop,
 				display: display,
+				maxWidth: maxWidth,
+				maxHeight: maxHeight,
 			})}
 		>
 			<div className={classNamesString(divClass, className)} {...otherProps}>

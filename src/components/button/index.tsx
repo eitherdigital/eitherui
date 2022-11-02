@@ -40,6 +40,8 @@ function Button({
 	paddingTop,
 	paddingLeft,
 	display,
+	maxWidth,
+	maxHeight,
 	...other
 }: ButtonProps) {
 	const [buttonClass] = React.useState(generateClassname("Button"));
@@ -61,6 +63,8 @@ function Button({
 				paddingRight: paddingRight,
 				paddingTop: paddingTop,
 				display: display,
+				maxHeight: maxHeight,
+				maxWidth: maxWidth,
 			})}
 		>
 			<button

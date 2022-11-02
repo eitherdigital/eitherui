@@ -11,7 +11,9 @@ export type DivStylesProps = {
 
 export function getStyles({
 	width,
+	maxWidth,
 	height,
+	maxHeight,
 	margin,
 	marginBottom,
 	marginTop,
@@ -47,11 +49,25 @@ export function getStyles({
 				if (width[index]) styles += `width: ${width[index]};`;
 			}
 		}
+		if (maxWidth) {
+			if (!Array.isArray(maxWidth)) {
+				styles += `max-width: ${maxWidth};`;
+			} else {
+				if (maxWidth[index]) styles += `max-width: ${maxWidth[index]};`;
+			}
+		}
 		if (height) {
 			if (!Array.isArray(height)) {
 				styles += `height: ${height};`;
 			} else {
 				if (height[index]) styles += `height: ${height[index]};`;
+			}
+		}
+		if (maxHeight) {
+			if (!Array.isArray(maxHeight)) {
+				styles += `max-height: ${maxHeight};`;
+			} else {
+				if (maxHeight[index]) styles += `max-height: ${maxHeight[index]};`;
 			}
 		}
 		if (borderRadius) {

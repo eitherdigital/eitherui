@@ -1,6 +1,8 @@
 export type DivCssProps = {
 	width?: string | string[];
+	maxWidth?: string | string[];
 	height?: string | string[];
+	maxHeight?: string | string[];
 	borderRadius?: string | string[];
 	margin?: string | string[];
 	marginTop?: string | string[];
