@@ -1,0 +1,87 @@
+.Switch {
+	cursor: pointer;
+	display: block;
+	padding: calc((20px - 14px) / 2);
+	position: relative;
+	user-select: none;
+}
+
+.Switch__input {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+}
+
+.Switch__children {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	display: block;
+	position: relative;
+}
+
+.Switch__children::before {
+	background: #fff;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), 0 3px 1px rgba(0, 0, 0, 0.06),
+		inset 0 0 0 0.5px rgba(0, 0, 0, 0.04);
+	border-radius: 50%;
+	position: absolute;
+	box-sizing: border-box;
+	content: "";
+}
+
+.Switch__size_md .Switch__children::before {
+	height: 23px;
+	left: calc((27px - 23px) / 2);
+	top: calc((27px - 23px) / 2);
+	width: 23px;
+}
+
+.Switch__size_lg .Switch__children::before {
+	height: 27px;
+	left: calc((31px - 27px) / 2);
+	top: calc((31px - 27px) / 2);
+	width: 27px;
+}
+
+.Switch__input:checked + .Switch__children::before {
+	transform: translateX(calc(32px - 12px));
+}
+
+.Switch__children::after {
+	background: rgba(0, 28, 61, 0.08);
+	border-radius: calc(32px / 2);
+	height: 27px;
+	width: 47px;
+	content: "";
+	display: block;
+}
+
+.Switch__size_md .Switch__children::after {
+	height: 27px;
+	width: 47px;
+}
+
+.Switch__size_lg .Switch__children::after {
+	height: 31px;
+	width: 51px;
+}
+
+.Switch__input:checked + .Switch__children::after {
+	background: var(--colors-main);
+	opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.Switch__children::after {
+		transition: background-color 0.2s ease;
+	}
+	.Switch__children::before {
+		transition: transform 0.2s cubic-bezier(0.36, -0.24, 0.26, 1.32),
+			-webkit-transform 0.2s cubic-bezier(0.36, -0.24, 0.26, 1.32);
+	}
+}
