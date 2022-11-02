@@ -10,7 +10,7 @@ export default {
 	component: Textarea,
 } as Meta;
 
-const Template: Story<TextareaProps> = (args) => (
+const Template: Story<TextareaProps> = args => (
 	<EitherRoot>
 		<Div>
 			<Textarea {...args} />
