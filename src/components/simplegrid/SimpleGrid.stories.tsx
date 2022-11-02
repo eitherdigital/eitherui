@@ -3,7 +3,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import SimpleGrid, { SimpleGridProps } from "./";
 import EitherRoot from "../root";
-import { Button } from "..";
+import { Button, ContentCard } from "..";
 
 export default {
 	title: "Blocks/SimpleGrid",
@@ -13,11 +13,22 @@ export default {
 const Template: Story<SimpleGridProps> = args => (
 	<EitherRoot>
 		<SimpleGrid {...args}>
-			<Button>Button 1</Button>
-			<Button>Button 2</Button>
-			<Button>Button 3</Button>
-			<Button>Button 4</Button>
-			<Button>Button 5</Button>
+			<ContentCard
+				title="Дистрибуция"
+				text="В нашем распоряжении более 150 стриминговых площадок по всему миру. Ваша музыка — на каждой из них."
+			/>
+			<ContentCard
+				title="Продвижение"
+				text="Продвижение вашего контента на стартовых страницах сервисов, в редакционных плейлистах и рубриках."
+			/>
+			<ContentCard
+				title="Поддержка"
+				text="Мелкий шрифт не останется незамеченным. Мы поможем разобраться с любыми ситуациями и защитим ваши права."
+			/>
+			<ContentCard
+				title="Личный менеджер"
+				text="Один в поле музыкального бизнеса — не воин. Персональный менеджер всегда на связи и готов помочь любые вопросы."
+			/>
 		</SimpleGrid>
 	</EitherRoot>
 );
@@ -25,6 +36,6 @@ const Template: Story<SimpleGridProps> = args => (
 export const Main = Template.bind({});
 
 Main.args = {
-	columns: [1, 2, 3],
-	spacing: ["5px", "10px", "15px"],
+	columns: [1, 2],
+	spacing: ["10px", "5px"],
 };
