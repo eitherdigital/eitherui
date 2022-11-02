@@ -14,3 +14,4 @@ export { default as Input } from "./input";
 export { default as Textarea } from "./textarea";
 export { default as Center } from "./center";
 export { default as ContentContainer } from "./contentcontainer";
+export { default as SimpleGrid } from "./simplegrid";

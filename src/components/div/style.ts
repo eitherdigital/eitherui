@@ -1,25 +1,13 @@
 import React from "react";
+import { DivCssProps } from "../../lib/style-system/style.types";
 import {
 	getBreakpoints,
 	mediaPrefix,
 } from "../../lib/style-system/style.utils";
 
 export type DivStylesProps = {
-	width?: string | string[];
-	height?: string | string[];
-	borderRadius?: string | string[];
-	margin?: string | string[];
-	marginTop?: string | string[];
-	marginBottom?: string | string[];
-	marginLeft?: string | string[];
-	marginRight?: string | string[];
-	padding?: string | string[];
-	paddingTop?: string | string[];
-	paddingBottom?: string | string[];
-	paddingLeft?: string | string[];
-	paddingRight?: string | string[];
 	className: string;
-};
+} & DivCssProps;
 
 export function getStyles({
 	width,
@@ -35,6 +23,7 @@ export function getStyles({
 	paddingRight,
 	paddingTop,
 	borderRadius,
+	display,
 	className,
 }: DivStylesProps) {
 	const breakpoints = getBreakpoints();
@@ -44,6 +33,13 @@ export function getStyles({
 	breakpoints.map((breakpoint, index) => {
 		let styles = ``;
 
+		if (display) {
+			if (!Array.isArray(display)) {
+				styles += `display: ${display};`;
+			} else {
+				if (display[index]) styles += `display: ${display[index]};`;
+			}
+		}
 		if (width) {
 			if (!Array.isArray(width)) {
 				styles += `width: ${width};`;

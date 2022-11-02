@@ -22,6 +22,7 @@ function Div({
 	paddingRight,
 	paddingTop,
 	paddingLeft,
+	display,
 	...otherProps
 }: DivProps) {
 	const [divClass] = React.useState(generateClassname("Div"));
@@ -43,6 +44,7 @@ function Div({
 				paddingLeft: paddingLeft,
 				paddingRight: paddingRight,
 				paddingTop: paddingTop,
+				display: display,
 			})}
 		>
 			<div className={classNamesString(divClass, className)} {...otherProps}>

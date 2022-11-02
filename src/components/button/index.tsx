@@ -36,6 +36,7 @@ function Button({
 	paddingRight,
 	paddingTop,
 	paddingLeft,
+	display,
 	...other
 }: ButtonProps) {
 	const [buttonClass] = React.useState(generateClassname("Button"));
@@ -56,6 +57,7 @@ function Button({
 				paddingLeft: paddingLeft,
 				paddingRight: paddingRight,
 				paddingTop: paddingTop,
+				display: display,
 			})}
 		>
 			<button

@@ -12,4 +12,5 @@ export type DivCssProps = {
 	paddingBottom?: string | string[];
 	paddingLeft?: string | string[];
 	paddingRight?: string | string[];
+	display?: string | string[];
 };
