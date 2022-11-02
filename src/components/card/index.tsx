@@ -1,10 +1,11 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
+import Div, { DivProps } from "../div";
 import styles from "./Card.css";
 
 export type CardProps = {
 	mode?: "outline" | "solid";
-} & React.HTMLAttributes<HTMLDivElement>;
+} & DivProps;
 
 export default function Card({
 	children,
@@ -13,7 +14,7 @@ export default function Card({
 	...otherProps
 }: CardProps) {
 	return (
-		<div
+		<Div
 			className={classNamesString(
 				styles["Card"],
 				styles[`Card__${mode}`],
@@ -21,7 +22,7 @@ export default function Card({
 			)}
 			{...otherProps}
 		>
-			<div className={styles["Card__content"]}>{children}</div>
-		</div>
+			<Div className={styles["Card__content"]}>{children}</Div>
+		</Div>
 	);
 }

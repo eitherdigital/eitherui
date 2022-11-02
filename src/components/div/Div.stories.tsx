@@ -9,16 +9,15 @@ export default {
 	component: Div,
 } as Meta;
 
-const Template: Story<DivProps> = (args) => (
+const Template: Story<DivProps> = args => (
 	<EitherRoot>
 		<Div
-			header={{
-				text: "Header",
-			}}
-			footer={{
-				text: "Footer",
-				style: { color: "gray" },
-			}}
+			width={["100px", "200px"]}
+			height={["100px", "200px"]}
+			style={{ border: "1px solid black", overflow: "hidden" }}
+			margin={["10px", "20px"]}
+			padding={["10px", "20px"]}
+			borderRadius={["10px", "20px"]}
 			{...args}
 		>
 			Div

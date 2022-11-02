@@ -1,9 +1,10 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
 import Center from "../center";
+import Div, { DivProps } from "../div";
 import styles from "./ContentContainer.css";
 
-export type ContentContainerProps = {} & React.HTMLAttributes<HTMLDivElement>;
+export type ContentContainerProps = {} & DivProps;
 
 function ContentContainer({
 	className,
@@ -12,12 +13,12 @@ function ContentContainer({
 }: ContentContainerProps) {
 	return (
 		<Center style={{ width: "100%" }}>
-			<div
+			<Div
 				className={classNamesString(styles["ContentContainer"], className)}
 				{...otherProps}
 			>
 				{children}
-			</div>
+			</Div>
 		</Center>
 	);
 }

@@ -1,10 +1,11 @@
 import React from "react";
 import { classNamesString } from "../../lib/classNames";
+import Div, { DivProps } from "../div";
 import styles from "./Progress.css";
 
 export type ProgressProps = {
 	value?: number;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & DivProps;
 
 const PROGRESS_MIN_VALUE = 0;
 const PROGRESS_MAX_VALUE = 100;
@@ -16,7 +17,7 @@ function Progress({ value = 0, className, ...restProps }: ProgressProps) {
 	);
 
 	return (
-		<div
+		<Div
 			aria-valuenow={value}
 			{...restProps}
 			role="progressbar"
@@ -24,12 +25,12 @@ function Progress({ value = 0, className, ...restProps }: ProgressProps) {
 			aria-valuemax={PROGRESS_MAX_VALUE}
 			className={classNamesString(styles["Progress"], className)}
 		>
-			<div
+			<Div
 				className={styles["Progress__in"]}
 				style={{ width: `${progress}%` }}
 				aria-hidden
 			/>
-		</div>
+		</Div>
 	);
 }
 

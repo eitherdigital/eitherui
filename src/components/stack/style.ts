@@ -1,10 +1,8 @@
 import { StackDirectionType } from ".";
-import { getBreakpoints } from "../../lib/style-system/style.utils";
-import { isArray } from "../../lib/utils";
-
-const mediaPrefix = (width: string) => {
-	return `@media screen and (min-width: ${width})`;
-};
+import {
+	getBreakpoints,
+	mediaPrefix,
+} from "../../lib/style-system/style.utils";
 
 export type getStylesProps = {
 	direction: StackDirectionType | StackDirectionType[];
@@ -32,13 +30,13 @@ export function getStyles({ direction, spacing, className }: getStylesProps) {
 
 	breakpoints.map((breakpoint, index) => {
 		let styles = ``;
-		if (!isArray(direction)) {
+		if (!Array.isArray(direction)) {
 			styles += `flex-direction: ${direction};`;
 		} else {
 			if (direction[index]) styles += `flex-direction: ${direction[index]};`;
 		}
 
-		if (!isArray(spacing)) {
+		if (!Array.isArray(spacing)) {
 			let direct =
 				index > direction.length
 					? direction[direction.length - 1]
@@ -71,13 +69,14 @@ export function getStyles({ direction, spacing, className }: getStylesProps) {
 					${getSpacing(direct, spacingIndex as string)}
 				}`;
 		}
-		css += breakpoint
-			? `${mediaPrefix(breakpoint)} {
+		if (styles.trim() !== "")
+			css += breakpoint
+				? `${mediaPrefix(breakpoint)} {
 			.${className} {
 				${styles}
 			}
 		}`
-			: `.${className} {
+				: `.${className} {
 				${styles}
 			}`;
 	});

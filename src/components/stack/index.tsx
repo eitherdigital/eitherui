@@ -3,6 +3,7 @@ import { classNamesString, generateClassname } from "../../lib/classNames";
 import styles from "./Stack.css";
 import { StyleProvider } from "../../lib/style-system";
 import { getStyles } from "./style";
+import Div, { DivProps } from "../div";
 
 export type StackDirectionType =
 	| "row"
@@ -13,7 +14,7 @@ export type StackDirectionType =
 export type StackProps = {
 	direction?: StackDirectionType | StackDirectionType[];
 	spacing?: string | string[];
-} & React.HTMLAttributes<HTMLDivElement>;
+} & DivProps;
 
 function Stack({
 	direction = "column",
@@ -32,12 +33,12 @@ function Stack({
 				className: stackClass,
 			})}
 		>
-			<div
+			<Div
 				className={classNamesString(styles["Stack"], stackClass, className)}
 				{...otherProps}
 			>
 				{children}
-			</div>
+			</Div>
 		</StyleProvider>
 	);
 }

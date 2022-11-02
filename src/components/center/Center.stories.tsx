@@ -9,9 +9,9 @@ export default {
 	component: Center,
 } as Meta;
 
-const Template: Story<CenterProps> = (args) => (
+const Template: Story<CenterProps> = args => (
 	<EitherRoot {...args}>
-		<Center>
+		<Center width="100%">
 			<Heading>Это центр</Heading>
 		</Center>
 	</EitherRoot>

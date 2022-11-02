@@ -1,42 +1,54 @@
 import React from "react";
-import { Text } from "..";
-import { classNamesString } from "../../lib/classNames";
-import styles from "./Div.css";
+import { classNamesString, generateClassname } from "../../lib/classNames";
+import { StyleProvider } from "../../lib/style-system";
+import { DivCssProps } from "../../lib/style-system/style.types";
+import { getStyles } from "./style";
 
-export type DivProps = {
-	header?: {
-		text: string;
-		style?: React.CSSProperties;
-		className?: string;
-	};
-	footer?: {
-		text: string;
-		style?: React.CSSProperties;
-		className?: string;
-	};
-} & React.HTMLAttributes<HTMLDivElement>;
+export type DivProps = {} & DivCssProps & React.HTMLAttributes<HTMLDivElement>;
 
-function Div({ children, header, footer, className, ...otherProps }: DivProps) {
+function Div({
+	children,
+	className,
+	width,
+	height,
+	borderRadius,
+	margin,
+	marginBottom,
+	marginLeft,
+	marginRight,
+	marginTop,
+	padding,
+	paddingBottom,
+	paddingRight,
+	paddingTop,
+	paddingLeft,
+	...otherProps
+}: DivProps) {
+	const [divClass] = React.useState(generateClassname("Div"));
+
 	return (
-		<div className={classNamesString(styles["Div"], className)} {...otherProps}>
-			{header && (
-				<div
-					style={header.style}
-					className={classNamesString(styles["Div__header"], header.className)}
-				>
-					<Text>{header.text}</Text>
-				</div>
-			)}
-			{children}
-			{footer && (
-				<div
-					style={footer.style}
-					className={classNamesString(styles["Div__footer"], footer.className)}
-				>
-					<Text>{footer.text}</Text>
-				</div>
-			)}
-		</div>
+		<StyleProvider
+			css={getStyles({
+				className: divClass,
+				width: width,
+				height: height,
+				borderRadius: borderRadius,
+				margin: margin,
+				marginBottom: marginBottom,
+				marginLeft: marginLeft,
+				marginRight: marginRight,
+				marginTop: marginTop,
+				padding: padding,
+				paddingBottom: paddingBottom,
+				paddingLeft: paddingLeft,
+				paddingRight: paddingRight,
+				paddingTop: paddingTop,
+			})}
+		>
+			<div className={classNamesString(divClass, className)} {...otherProps}>
+				{children}
+			</div>
+		</StyleProvider>
 	);
 }
 
