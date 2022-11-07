@@ -9833,11 +9833,6 @@ raw-loader@^4.0.2:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
-react-css-component@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-css-component/-/react-css-component-1.0.2.tgz#4763946764dc88985ef70a438a03f004929d4ad4"
-  integrity sha512-O2LZx6uBUuFDMxfEZ+yo+WnTkzLfqQq0zjivMlMBnpWeyZ7Dhq3gXaekk2a2nBNmHUwF7IVA1ICpDXyLU/wT7g==
-
 react-docgen-typescript@^2.1.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-2.2.2.tgz#4611055e569edc071204aadb20e1c93e1ab1659c"
