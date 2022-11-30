@@ -1,18 +1,18 @@
 import React from "react";
-import { UniversalStyle as Style } from "react-css-component";
+import InjectCss from "./InjectCss";
 
 export type StyleProviderProps = {
-	children: React.ReactNode;
-	css: string;
+  children: React.ReactNode;
+  css: string;
 };
 
 function StyleProvider({ children, css }: StyleProviderProps) {
-	return (
-		<>
-			<Style css={css.replace(/\s+/g, " ").replace(/(^\s*)|(\s*)$/g, "")} />
-			{children}
-		</>
-	);
+  return (
+    <>
+      <InjectCss css={css.replace(/\s+/g, " ").replace(/(^\s*)|(\s*)$/g, "")} />
+      {children}
+    </>
+  );
 }
 
 export default StyleProvider;
